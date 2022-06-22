@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useSelector } from 'react-redux'
 import { RootStore } from '../store/modules/reducer'
 
@@ -40,7 +41,13 @@ function Header() {
     <>
       <header className="header boxShadow _flex_s_b_">
         <div className="logo">
-          <img className="img" src="/logo.png" alt="" />
+          <Image 
+            src="/logo.png"
+            alt="説明画像"
+            layout="fill"
+            objectFit="contain"
+            className="img"
+          />
         </div>
         <ul className="list _flex_ pr-2">
           {pathArray.map((item: PathObj) => {

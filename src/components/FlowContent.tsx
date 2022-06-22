@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import Image from 'next/image'
 import Box from '@mui/material/Box'
 import Stepper from '@mui/material/Stepper'
 import Step from '@mui/material/Step'
@@ -235,7 +236,7 @@ function FlowContent(props: SetProps) {
                       <Divider />
                       {searchLinkList.map((item: SearchText) => {
                         return (
-                          <ListItem disablePadding>
+                          <ListItem disablePadding key={item.id} >
                             <ListItemButton
                               onClick={() => {
                                 window.open(
@@ -259,10 +260,12 @@ function FlowContent(props: SetProps) {
                         <p className="text pb-1">{item}</p>
                         {
                           <div className="img-box _flex_">
-                            <img
-                              src={`pattern/${setPath(index + 1)}.png`}
+                            <Image 
+                              src={`/pattern/${setPath(index + 1)}.png`}
+                              alt="説明画像"
+                              layout="fill"
+                              objectFit="contain"
                               className="img"
-                              alt=""
                             />
                           </div>
                         }

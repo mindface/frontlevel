@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { RootStore } from '../store/modules/reducer'
+import Image from 'next/image'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
@@ -78,7 +79,13 @@ function DiscContent() {
               <TabPanel value={value} index={0}>
                 <div className="disc-panel _flex_">
                   <div className="disc-image p-3">
-                    <img src="disc/disc_01.svg" alt="" className="img" />
+                    <Image 
+                      src="/disc/disc_01.svg"
+                      alt="説明画像"
+                      layout="fill"
+                      objectFit="contain"
+                      className="img"
+                    />
                   </div>
                   <div className="disc-info">
                     <Typography variant="h6" gutterBottom component="div">
@@ -94,7 +101,13 @@ function DiscContent() {
               <TabPanel value={value} index={1}>
                 <div className="disc-panel _flex_">
                   <div className="disc-image p-3">
-                    <img src="disc/disc_02.svg" alt="" className="img" />
+                    <Image 
+                        src="/disc/disc_02.svg"
+                        alt="説明画像"
+                        layout="fill"
+                        objectFit="contain"
+                        className="img"
+                      />
                   </div>
                   <div className="disc-info">
                     <Typography variant="h6" gutterBottom component="div">
@@ -109,7 +122,13 @@ function DiscContent() {
               <TabPanel value={value} index={2}>
                 <div className="disc-panel _flex_">
                   <div className="disc-image p-3">
-                    <img src="disc/disc_03.svg" alt="" className="img" />
+                     <Image 
+                        src="/disc/disc_03.svg"
+                        alt="説明画像"
+                        layout="fill"
+                        objectFit="contain"
+                        className="img"
+                      />
                   </div>
                   <div className="disc-info">
                     <Typography variant="h6" gutterBottom component="div">
@@ -124,7 +143,13 @@ function DiscContent() {
               <TabPanel value={value} index={3}>
                 <div className="disc-panel _flex_">
                   <div className="disc-image p-3">
-                    <img src="disc/disc_04.svg" alt="" className="img" />
+                    <Image 
+                      src="/disc/disc_04.svg"
+                      alt="説明画像"
+                      layout="fill"
+                      objectFit="contain"
+                      className="img"
+                    />
                   </div>
                   <div className="disc-info">
                     <Typography variant="h6" gutterBottom component="div">
@@ -139,7 +164,13 @@ function DiscContent() {
               <TabPanel value={value} index={4}>
                 <div className="disc-panel _flex_">
                   <div className="disc-image p-3">
-                    <img src="disc/disc_05.svg" alt="" className="img" />
+                    <Image
+                      src="/disc/disc_05.svg"
+                      alt="説明画像"
+                      layout="fill"
+                      objectFit="contain"
+                      className="img"
+                    />
                   </div>
                   <div className="disc-info">
                     <Typography variant="h6" gutterBottom component="div">
@@ -154,7 +185,13 @@ function DiscContent() {
               <TabPanel value={value} index={5}>
                 <div className="disc-panel _flex_">
                   <div className="disc-image p-3">
-                    <img src="disc/disc_06.svg" alt="" className="img" />
+                      <Image 
+                      src="/disc/disc_06.svg"
+                      alt="説明画像"
+                      layout="fill"
+                      objectFit="contain"
+                      className="img"
+                    />
                   </div>
                   <div className="disc-info">
                     <Typography variant="h6" gutterBottom component="div">
@@ -169,7 +206,13 @@ function DiscContent() {
               <TabPanel value={value} index={6}>
                 <div className="disc-panel _flex_">
                   <div className="disc-image p-3">
-                    <img src="disc/disc_01.svg" alt="" className="img" />
+                    <Image 
+                      src="/disc/disc_01.svg"
+                      alt="説明画像"
+                      layout="fill"
+                      objectFit="contain"
+                      className="img"
+                    />
                   </div>
                   <div className="disc-info">
                     <Typography variant="h6" gutterBottom component="div">
