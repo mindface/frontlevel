@@ -1,0 +1,26 @@
+@use "./_vari" as *
+
+.control
+  position: fixed
+  z-index: 1
+  right: 0
+  bottom: 0
+  min-width: 240px
+  background-color: $white_color
+  transition: transform 0.2s
+  &-title
+    font-size: 16px
+  &-field
+    .caption
+      font-size: 14px
+  &.off
+    background-color: $white_color
+    transform: translateX(100%)
+    .switcher
+      transform: translateX(calc(-100% + 100px))
+  .switcher
+    transition: transform 0.2s
+  .copyright
+    display: inline-block
+    padding: 4px
+    font-size: 12px
