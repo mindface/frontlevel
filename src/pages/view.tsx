@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import NumberContent from "../components/NumberContent";
-import ViewControl from "../components/ViewControl";
-import FrequentlyItems from "../components/FrequentlyItems";
-import ViewFlowInfoContent from "../components/ViewFlowInfoContent";
+import NumberContent from '../components/NumberContent'
+import ViewControl from '../components/ViewControl'
+import FrequentlyItems from '../components/FrequentlyItems'
+import ViewFlowInfoContent from '../components/ViewFlowInfoContent'
 
 const View: NextPage = () => {
   return (

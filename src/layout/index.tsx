@@ -1,11 +1,11 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import React, { ReactNode } from "react";
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+import React, { ReactNode } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 type Props = {
-  children?: ReactNode;
-};
+  children?: ReactNode
+}
 
 const Layout = ({ children }: Props) => {
   return (
@@ -14,7 +14,7 @@ const Layout = ({ children }: Props) => {
       {children}
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

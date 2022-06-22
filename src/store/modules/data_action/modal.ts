@@ -1,17 +1,17 @@
-import { Action } from "redux";
+import { Action } from 'redux'
 
 export interface ModalAction extends Action {
-  type: string;
-  modalView: boolean;
-  viewId: number;
-  selectId: number;
-  canvasElement: HTMLCanvasElement;
+  type: string
+  modalView: boolean
+  viewId: number
+  selectId: number
+  canvasElement: HTMLCanvasElement
 }
 
 export interface ModalActionFailure extends Action {
-  type: string;
-  err: string;
-  id: string;
+  type: string
+  err: string
+  id: string
 }
 
 export function initalCardState(): any {
@@ -21,8 +21,8 @@ export function initalCardState(): any {
     selectId: 1,
     isFetching: false,
     isloading: false,
-    canvasElement: "",
-  };
+    canvasElement: '',
+  }
 }
 
 export function modalReducer(
@@ -30,32 +30,32 @@ export function modalReducer(
   action: ModalAction
 ) {
   switch (action.type) {
-    case "modal/open":
+    case 'modal/open':
       return {
         ...state,
         modalView: true,
         viewId: action.viewId,
-      };
-    case "modal/close":
+      }
+    case 'modal/close':
       return {
         ...state,
         modalView: false,
-      };
-    case "modal/dataget":
+      }
+    case 'modal/dataget':
       return {
         ...state,
         isFetching: false,
-      };
-    case "modal/selectId":
+      }
+    case 'modal/selectId':
       return {
         ...state,
         selectId: action.selectId,
-      };
-    case "modal/setCanvas":
+      }
+    case 'modal/setCanvas':
       return {
         ...state,
         canvasElement: action.canvasElement,
-      };
+      }
     //  case 'level/datadelete':
     //    axios.delete(`http://localhost:3003/api/levels/${action['id']}`)
     //    .then( (res) => {
@@ -69,6 +69,6 @@ export function modalReducer(
     //   isFetching: true
     // }
     default:
-      return state;
+      return state
   }
 }

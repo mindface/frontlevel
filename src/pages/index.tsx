@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import NumberContent from "../components/NumberContent";
-import LevelContent from "../components/LevelContent";
+import NumberContent from '../components/NumberContent'
+import LevelContent from '../components/LevelContent'
 
 const Home: NextPage = () => {
   return (

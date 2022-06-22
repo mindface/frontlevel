@@ -1,5 +1,5 @@
-import { Action } from "redux";
-import { Levels, LevelsInfo, InitalLevelState } from "../../../models/levels";
+import { Action } from 'redux'
+import { Levels, LevelsInfo, InitalLevelState } from '../../../models/levels'
 
 export function initalLevelState(): InitalLevelState {
   return {
@@ -11,20 +11,20 @@ export function initalLevelState(): InitalLevelState {
       verification: 0,
       info: 0,
     },
-    userLevel: 1
-  };
+    userLevel: 1,
+  }
 }
 
 export interface LevelAction extends Action {
-  type: string;
-  levelDataItem: Levels[];
-  levelsInfo?: LevelsInfo;
-  userLevel?: number;
+  type: string
+  levelDataItem: Levels[]
+  levelsInfo?: LevelsInfo
+  userLevel?: number
 }
 
 export interface LevelActionFailure extends Action {
-  type: string;
-  err: string;
+  type: string
+  err: string
 }
 
 export function levelReducer(
@@ -32,60 +32,60 @@ export function levelReducer(
   action: LevelAction
 ) {
   switch (action.type) {
-    case "levelinfo/request":
+    case 'levelinfo/request':
       return {
         ...state,
         isFetching: true,
         levelDataItem: [],
-      };
-    case "levelinfo/success":
+      }
+    case 'levelinfo/success':
       return {
         ...state,
         isFetching: false,
-        levelDataItem: action["levelDataItem"],
-      };
-    case "levelinfo/failure":
+        levelDataItem: action['levelDataItem'],
+      }
+    case 'levelinfo/failure':
       return {
         ...state,
         isFetching: false,
         levelDataItem: [],
-      };
-    case "levelinfo/setLevelInfo":
+      }
+    case 'levelinfo/setLevelInfo':
       return {
         ...state,
         isFetching: false,
-        levelsInfo: action["levelsInfo"],
-      };
-    case "levelinfo/setUserLevel":
+        levelsInfo: action['levelsInfo'],
+      }
+    case 'levelinfo/setUserLevel':
       return {
         ...state,
-        userLevel: action["userLevel"],
-      };
+        userLevel: action['userLevel'],
+      }
     default:
-      return state;
+      return state
   }
 }
 
 export const levelFetchDataRequest = (): LevelAction => {
   return {
-    type: "levelinfo/request",
+    type: 'levelinfo/request',
     levelDataItem: [],
-  };
-};
+  }
+}
 
 export const levelFetchDataSuccess = (data: Levels[]): LevelAction => {
   return {
-    type: "levelinfo/success",
+    type: 'levelinfo/success',
     levelDataItem: data,
-  };
-};
+  }
+}
 
 export const levelFetchDataFailure = (err: string): LevelActionFailure => {
   return {
-    type: "levelinfo/failure",
+    type: 'levelinfo/failure',
     err: err,
-  };
-};
+  }
+}
 
 // export const AddLvelData = (sendData:any) => {
 //   const postSendData = sendData

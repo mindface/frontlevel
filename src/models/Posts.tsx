@@ -1,7 +1,7 @@
 export interface Posts {
-  id: Number;
-  text: String;
-  name: String;
-  disc: String;
-  imgPath: String;
+  id: Number
+  text: String
+  name: String
+  disc: String
+  imgPath: String
 }

@@ -2,10 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
-import LevelInfoContent from "../../components/LevelInfoContent";
+import LevelInfoContent from '../../components/LevelInfoContent'
 
 const Level: NextPage = () => {
-  const router = useRouter();
+  const router = useRouter()
   return (
     <div className="index">
       <Head>

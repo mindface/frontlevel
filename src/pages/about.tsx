@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import DiscContent from "../components/DiscContent";
+import DiscContent from '../components/DiscContent'
 
 const About: NextPage = () => {
   return (

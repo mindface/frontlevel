@@ -1,25 +1,25 @@
-import { Action, Dispatch } from "redux";
-import { Levels } from "../../../models/levels";
+import { Action, Dispatch } from 'redux'
+import { Levels } from '../../../models/levels'
 
-export const FETCH_LEVEL_DATA_REQUEST = "FETCH_LEVEL_DATA_REQUEST";
-export const FETCH_LEVEL_DATA_SUCCESS = "FETCH_LEVEL_DATA_SUCCESS";
-export const FETCH_LEVEL_DATA_FAILURE = "FETCH_LEVEL_DATA_FAILURE";
+export const FETCH_LEVEL_DATA_REQUEST = 'FETCH_LEVEL_DATA_REQUEST'
+export const FETCH_LEVEL_DATA_SUCCESS = 'FETCH_LEVEL_DATA_SUCCESS'
+export const FETCH_LEVEL_DATA_FAILURE = 'FETCH_LEVEL_DATA_FAILURE'
 
 export function initalLevelState(): any {
   return {
     levelDataItem: [],
     modalView: false,
-  };
+  }
 }
 
 export interface LevelPostAction extends Action {
-  type: string;
-  items: Levels[];
+  type: string
+  items: Levels[]
 }
 
 export interface LevelPostActionFailure extends Action {
-  type: string;
-  err: string;
+  type: string
+  err: string
 }
 
 export function postReducer(
@@ -32,23 +32,23 @@ export function postReducer(
         ...state,
         isFetching: true,
         levelDataItem: [],
-      };
+      }
     case FETCH_LEVEL_DATA_SUCCESS:
-      console.log(action);
+      console.log(action)
 
       return {
         ...state,
         isFetching: false,
-        levelDataItem: action["items"],
-      };
+        levelDataItem: action['items'],
+      }
     case FETCH_LEVEL_DATA_FAILURE:
       return {
         ...state,
         isFetching: false,
         levelDataItem: [],
-      };
+      }
     default:
-      return state;
+      return state
   }
 }
 
@@ -56,24 +56,24 @@ export const levelFetchDataRequest = (): LevelPostAction => {
   return {
     type: FETCH_LEVEL_DATA_REQUEST,
     items: [],
-  };
-};
+  }
+}
 
 export const levelFetchDataSuccess = (data: Levels[]): LevelPostAction => {
-  console.log("00000");
+  console.log('00000')
   return {
     type: FETCH_LEVEL_DATA_SUCCESS,
     items: data,
-  };
-};
+  }
+}
 
 export const levelFetchDataFailure = (err: string): LevelPostActionFailure => {
-  console.log("00000");
+  console.log('00000')
   return {
     type: FETCH_LEVEL_DATA_FAILURE,
     err: err,
-  };
-};
+  }
+}
 
 // export const AddLvelData = (sendData:any) => {
 //   const postSendData = sendData
