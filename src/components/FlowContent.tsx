@@ -236,7 +236,8 @@ function FlowContent(props: SetProps) {
                       <Divider />
                       {searchLinkList.map((item: SearchText,index:number) => {
                         return (
-                          <ListItem disablePadding key={index} >
+                          <div key={index}>
+                          <ListItem >
                             <ListItemButton
                               onClick={() => {
                                 window.open(
@@ -248,6 +249,7 @@ function FlowContent(props: SetProps) {
                               <ListItemText primary={item.text} />
                             </ListItemButton>
                           </ListItem>
+                          </div>
                         )
                       })}
                     </List>
