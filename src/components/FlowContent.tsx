@@ -234,9 +234,9 @@ function FlowContent(props: SetProps) {
                         検索サンプルテキスト
                       </ListItem>
                       <Divider />
-                      {searchLinkList.map((item: SearchText) => {
+                      {searchLinkList.map((item: SearchText,index:number) => {
                         return (
-                          <ListItem disablePadding key={item.id} >
+                          <ListItem disablePadding key={index} >
                             <ListItemButton
                               onClick={() => {
                                 window.open(
